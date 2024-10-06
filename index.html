@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
     <title>Dashboard</title>
 </head>
 <body>
@@ -24,10 +27,12 @@
             </div>
         </div>
         <div id="header-bottom">
-            <img src="assets/alien-avatar.png" alt="ashley avatar">
-            <div>
-                <p>Hi there,</p>
-                <h2>Ashley Hambly (@ashley)</h2>
+            <div id="header-bottom-left">
+                <img src="assets/alien-avatar.png" alt="ashley avatar">
+                <div>
+                    <p>Hi there,</p>
+                    <h2>Ashley Hambly</h2>
+                </div>   
             </div>
             <ul>
                 <li>New</li>
@@ -62,7 +67,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M20,2H4A2,2 0 0,0 2,4V22L6,18H20A2,2 0 0,0 22,16V4C22,2.89 21.1,2 20,2Z" />
                 </svg>
-                <h3>Messages</h3>
+                <h3>Messages <sup>3</sup></h3>
             </div>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -80,7 +85,7 @@
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                     <path d="M12,5.5A3.5,3.5 0 0,1 15.5,9A3.5,3.5 0 0,1 12,12.5A3.5,3.5 0 0,1 8.5,9A3.5,3.5 0 0,1 12,5.5M5,8C5.56,8 6.08,8.15 6.53,8.42C6.38,9.85 6.8,11.27 7.66,12.38C7.16,13.34 6.16,14 5,14A3,3 0 0,1 2,11A3,3 0 0,1 5,8M19,8A3,3 0 0,1 22,11A3,3 0 0,1 19,14C17.84,14 16.84,13.34 16.34,12.38C17.2,11.27 17.62,9.85 17.47,8.42C17.92,8.15 18.44,8 19,8M5.5,18.25C5.5,16.18 8.41,14.5 12,14.5C15.59,14.5 18.5,16.18 18.5,18.25V20H5.5V18.25M0,20V18.5C0,17.11 1.89,15.94 4.45,15.6C3.86,16.28 3.5,17.22 3.5,18.25V20H0M24,20H20.5V18.25C20.5,17.22 20.14,16.28 19.55,15.6C22.11,15.94 24,17.11 24,18.5V20Z" />
                 </svg>
-                <h3>Communities</h3>
+                <h3>Communities <sup>1</sup></h3>
             </div>
         </div>
 
@@ -110,30 +115,42 @@
         <div id="projects">
             <h4>Your Projects</h4>
             <div id="projects-cont">
-                <div class="project-card">
-                    <img src="assets/calculator.png" alt="calculator screenshot">
-                    <p>Calculator</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/etch-a-sketch.png" alt="etch-a-sketch screenshot">
-                    <p>Etch-A-Sketch</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/rn-converter.png" alt="roman numeral converter screenshot">
-                    <p>Roman Numeral Converter</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/rock-paper-scissors.png" alt="rock paper scissors screenshot">
-                    <p>Rock, Paper, Scissors</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/scoreboard.png" alt="scoreboard screenshot">
-                    <p>Basketball Scoreboard</p>
-                </div>
-                <div class="project-card">
-                    <img src="assets/sign-up-form.png" alt="sign-up form screenshot">
-                    <p>Sign-up Form</p>
-                </div>
+                <a href="https://ahambly23.github.io/odin-calculator/" target="_blank">
+                    <div class="project-card">
+                        <img src="assets/calculator.png" alt="calculator screenshot">
+                        <p>Calculator</p>
+                    </div>
+                </a>
+                <a href="https://ahambly23.github.io/odin-etch-a-sketch/" target="_blank">
+                    <div class="project-card">
+                        <img src="assets/etch-a-sketch.png" alt="etch-a-sketch screenshot">
+                        <p>Etch-A-Sketch</p>
+                    </div>
+                </a>
+                <a href="https://ahambly23.github.io/fcc-numeral-converter/" target="_blank">
+                    <div class="project-card">
+                        <img src="assets/rn-converter.png" alt="roman numeral converter screenshot">
+                        <p>Roman Numeral Converter</p>
+                    </div>
+                </a>
+                <a href="https://ahambly23.github.io/odin-rock-paper-scissors/" target="_blank">
+                    <div class="project-card">
+                        <img src="assets/rock-paper-scissors.png" alt="rock paper scissors screenshot">
+                        <p>Rock, Paper, Scissors</p>
+                    </div>
+                </a>
+                <a href="https://ahambly23.github.io/bball-scoreboard/" target="_blank">
+                    <div class="project-card">
+                        <img src="assets/scoreboard.png" alt="scoreboard screenshot">
+                        <p>Basketball Scoreboard</p>
+                    </div>
+                </a>
+                <a href="https://ahambly23.github.io/odin-sign-up-form/" target="_blank">
+                    <div class="project-card">
+                        <img src="assets/sign-up-form.png" alt="sign-up form screenshot">
+                        <p>Sign-up Form</p>
+                    </div>
+                </a>
             </div>
         </div>
 
