@@ -9,18 +9,115 @@ svg {
 
 body {
     display: grid;
-    grid-template: 1fr 3fr / 1fr 4fr;
+    grid-template: 15% 85% / 15% 85%;
 }
 
 header {
     grid-column: 2 / span 1;
     grid-row: 1;
     border: 1px solid black;
-    height: 200px;
+}
+
+#header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+input {
+    width: 80ch;
+}
+
+#header-top-right {
+    display: flex;
+}
+
+#header-top-right img {
+    height: 30px;
+    width: auto;
+}
+
+#header-bottom {
+    display: flex;
+}
+
+#header-bottom img {
+    height: 40px;
+    width: auto;
+}
+
+#header-bottom ul {
+    display: flex;
 }
 
 #sidebar {
     grid-column: span 1;
-    border: 1px solid black;
     grid-row: span 2;
+    border: 1px solid black;
+    background-color: #1992d4;
+    color: white;
+}
+
+.sidebar-middle {
+    margin: 30px 0px;
+}
+
+.sidebar-top,
+.sidebar-middle div,
+.sidebar-bottom div {
+    display: flex;
+    margin: 10px 0px;
+}
+
+#sidebar div svg path {
+    fill: white;
+}
+
+main {
+    grid-row: 2;
+    grid-column: 2;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 50% 50%;
+}
+
+#projects {
+    grid-column: 1;
+    grid-row: span 2;
+    padding: 10px;
+}
+
+#projects-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.project-card {
+    padding: 10px;
+}
+
+.project-card img {
+    height: 150px;
+    width: auto;
+}
+
+#announcements {
+    grid-column: 2;
+    grid-row: 1;
+}
+
+#trending {
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.trending-cards {
+    display: flex;
+}
+
+.trending-cards img {
+    height: 30px;
+    width: auto;
 }
