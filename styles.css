@@ -4,6 +4,10 @@
     font-family: "Open Sans", sans-serif;
 }
 
+html {
+    background-color: #989b8f;
+}
+
 svg {
     height: 24px;
 }
@@ -18,20 +22,23 @@ header {
     grid-row: 1;
     padding: 10px;
     box-shadow: 4px 4px #1992d4;
+    background-color: #41423d;
+    color: #d2de60;
 }
 
 #header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0px 20px;
 }
 
 input {
     width: 80ch;
     border: none;
     border-radius: 20px;
-    background-color: #e2e8f0;
-    padding: 4px;
+    background-color: #d2de60;
+    padding: 6px;
     outline: none;
 }
 
@@ -45,9 +52,15 @@ input {
     margin-right: 4px;
 }
 
+#header-top-left svg,
+#header-top-right svg {
+    fill: #d2de60; 
+}
+
 #header-top-right {
     display: flex;
     align-items: center;
+    margin-right: 12px;
 }
 
 #header-top-right svg,
@@ -87,7 +100,7 @@ input {
 
 #header-bottom-left p {
     font-size: 12px;
-    color: #6c7074;
+    color: #939c44;
 }
 
 #header-bottom ul {
@@ -104,8 +117,8 @@ li {
 #sidebar {
     grid-column: span 1;
     grid-row: span 2;
-    background-color: #1992d4;
-    color: white;
+    background-color: #d2de60;
+    color: #41423d;
     position: fixed;
     height: 100%;
     width: 16.65%;
@@ -120,15 +133,16 @@ li {
 .sidebar-bottom div {
     display: flex;
     align-items: center;
-    margin: 8px 0px;
+    margin: 8px 8px;
     padding: 10px;
     cursor: pointer;
+    transition: 0.2s ease-in-out;
 }
 
 .sidebar-middle div:hover,
 .sidebar-bottom div:hover {
-    color: #e2e8f0
-    
+    box-shadow: 4px 4px 4px #41423d;
+    border-radius: 10px;
 }
 
 #sidebar div svg {
@@ -136,11 +150,12 @@ li {
 }
 
 #sidebar div svg path {
-    fill: white;
+    fill: #41423d;
 }
 
 sup {
-    background-color: red;
+    background-color: #41423d;
+    color: #d2de60;
     font-size: 12px;
     padding: 3px 8px;
     border-radius: 20px;
@@ -154,7 +169,7 @@ main {
     display: grid;
     grid-template-columns: 70% 30%;
     grid-template-rows: 50% 50%;
-    background-color: #e2e8f0;
+    background-color: #989b8f;
     justify-content: center;
     align-items: center;
     gap: 18px;
@@ -167,8 +182,12 @@ main {
     padding: 0px 20px 20px 10px;
 }
 
-#projects h4 {
+#projects h4,
+#announcements h4,
+#trending h4 {
     margin-bottom: 12px;
+    color: #41423d;
+    font-size: 20px;
 }
 
 #projects-cont {
@@ -180,13 +199,14 @@ main {
 
 .project-card {
     padding: 20px;
-    background-color: white;
+    background-color: #41423d;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-left: 12px solid #1992d4;
+    border-left: 12px solid #d2de60;
+    box-shadow: 8px 8px 4px #7d8076;
 }
 
 .project-card img {
@@ -194,17 +214,18 @@ main {
     width: auto;
     border-radius: 10px;
     margin-bottom: 20px;
-    transition: 0.5s ease;
-    filter: grayscale(50%);
+    transition: 1s ease;
+    filter: grayscale(100%);
 }
 
 .project-card img:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
+    filter: grayscale(0%);
 }
 
 a {
     text-decoration: none;
-    color: black;
+    color: #d2de60;
     font-weight: 600;
     font-size: 18px;
 }
@@ -215,12 +236,10 @@ a {
     margin-right: 20px;
 }
 
-#announcements h4 {
-    margin-bottom: 10px;
-}
-
-#announcements div {
-    background-color: white;
+#announcements div,
+#trending div {
+    background-color: #41423d;
+    color: #989b8f;
     padding: 8px;
     border-radius: 10px;
 }
@@ -229,24 +248,42 @@ a {
     border-radius: 0px;
 }
 
+.announcement h5,
+.trending-cards div h5 {
+    color: #d2de60;
+    cursor: pointer;
+}
+
 .announcement p {
     font-size: 14px;
 }
 
 .bottom-border {
-    border-bottom: 2px solid gray;
+    border-bottom: 2px solid #d2de60;
 }
 
 #trending {
     grid-column: 2;
     grid-row: 2;
+    align-self: self-start;
+    margin-right: 20px;
 }
 
 .trending-cards {
     display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .trending-cards img {
     height: 30px;
     width: auto;
+}
+
+.trending-cards div p {
+    cursor: pointer;
+}
+
+.trending-cards div p:hover {
+    color: #7d8076;
 }
